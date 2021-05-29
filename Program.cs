@@ -39,7 +39,13 @@ namespace Recognition
 				Recognizer task = Select(tasks);
 				Console.Clear();
 				if (task == null) return;
-				try { Console.WriteLine(task.Recognize()); Console.ReadKey(); }
+				try
+				{
+					var s = task.Recognize();
+					if (s == null) continue;
+					Console.WriteLine(s);
+					Console.ReadKey();
+				}
 				catch (Exception e)
 				{
 					Console.Clear();

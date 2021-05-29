@@ -26,6 +26,7 @@ namespace Recognition
 		public override string Recognize()
 		{
 			base.Recognize();
+			if (field == null) return null;
 			figuresPoint = new List<List<Point>>();
 			GetAllFigures();
 			List<Point> mouthPoint = GetMouth();

@@ -14,6 +14,7 @@ namespace Recognition
 		public virtual string Recognize()
 		{
 			field = Select();
+			if (field == null) return null;
 			Console.Clear();
 			PrintField(field);
 			return "";

@@ -25,6 +25,7 @@ namespace Recognition
 		public override string Recognize()
 		{
 			base.Recognize();
+			if (field == null) return null;
 			int num = FindeNumeByCorners(GetCorners());
 			if (num > -1)
 				return num.ToString();
